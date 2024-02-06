@@ -1,18 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React element i.e React.createElement => this is basically a object => when we render this element on to dom it becomes an HTML
 
-// The following line is creating react element
-const heading = React.createElement("h1", { id: "heading" }, "Namaste react");
-// console.log("react heading ==>", heading);
 
-// using JSX
+// Functional component
 
-const jsxHeading = <h1 id="heading">Namaste react by using JSX</h1>;
+const Title=()=>(
+    <h1 className="head">This is the tile component</h1>
+)
 
-// console.log("jsx heading ==>", jsxHeading);
+const HeadingComponent=()=>
+
+    (
+        <div id="container">
+            <Title/>
+            <h1>Welcome to the heading component</h1>
+        </div>
+    )
+
+
+// const HeadingComponent = () => {
+//   return <h1>This is just returned the function</h1>;
+// };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+root.render(<HeadingComponent /> );
